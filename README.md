@@ -1,4 +1,4 @@
 code-guidelines
 ===============
 
-Coding guidelines for different languages used by the organization
+Multiple coding guidelines for evey language we use within the organization.
