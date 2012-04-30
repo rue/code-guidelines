@@ -37,7 +37,7 @@ When you are about to invent a custom VERB on your service, it means that you ar
 	
 For example, lets say you have a method on your service that is called Buy: 
 	
-You would want to create a method thta make a customer buy a group of item, but here is no BUY verb defined in HTTP.
+You would want to create a method that makes a customer buy a collection of items, but here is no BUY verb defined in HTTP.
 Instead, you would need a new resource called purchase and you would POST on /customer/123/purchases to create a new purchase for that customer. 
 		
 ### <a name="address"/>Addressability</a>
