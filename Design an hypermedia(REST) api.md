@@ -14,10 +14,10 @@
 
 ## <a name="intro"/>Introduction</a>
 	
-	This guide should describe most of what REST is and its purpose. This is by no means an authoritative source and will be subject to change during time.
-	REst aims at making the machines be able to talk to each other without the need of human (coder) intervention. It standardizes the interactions between them.
-	With rpc you need to know in advance all the method with their parameters and return types for the client to be able to talk to the server.
-	The communication is so different from service to service that a programmer has to code the interaction between it's client and every services.
+This guide should describe most of what REST is and its purpose. This is by no means an authoritative source and will be subject to change during time.
+REST aims at making the machines be able to talk to each other without the need of human (coder) intervention. It standardizes the interactions between them.
+With rpc you need to know in advance all the method with their parameters and return types for the client to be able to talk to the server.
+The communication is so different from service to service that a programmer has to code the interaction between it's client and every services.
 	
 ## <a name="doc"/>Available REST documentations</a>
 	
