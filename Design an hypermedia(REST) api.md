@@ -21,7 +21,7 @@ The communication is so different from service to service that a programmer has 
 	
 ## <a name="doc"/>Available REST documentations</a>
 	
-* [http://tomayko.com/writings/rest-to-my-wife](#http://tomayko.com/writings/rest-to-my-wife)
+* [http://tomayko.com/writings/rest-to-my-wife](http://tomayko.com/writings/rest-to-my-wife)
 * Restful web services (available in pdf for free)
 
 ## <a name="theory"/>Theory</a>
