@@ -18,10 +18,13 @@ This guide should describe most of what REST is and its purpose. This is by no m
 REST aims at making the machines be able to talk to each other without the need of human (coder) intervention. It standardizes the interactions between them.
 With rpc you need to know in advance all the method with their parameters and return types for the client to be able to talk to the server.
 The communication is so different from service to service that a programmer has to code the interaction between it's client and every services.
+
+A part of the guide will be focused on describing what part the company will implement and what part will be kept on the ice for now.
+Its purpose is to give you a good idea on how to maintain and build our web services.
 	
 ## <a name="doc"/>Available REST documentations</a>
 	
-* [http://tomayko.com/writings/rest-to-my-wife](http://tomayko.com/writings/rest-to-my-wife)
+* [How I Explained REST to My Wife](http://tomayko.com/writings/rest-to-my-wife)
 * Restful web services (available in pdf for free)
 
 ## <a name="theory"/>Theory</a>
