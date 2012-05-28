@@ -31,7 +31,7 @@ Its purpose is to give you a good idea on how to maintain and build our web serv
 * Restful web services (available in pdf for free)
 
 ## <a name="theory"/>Theory</a>
-	
+
 ### <a name="resources"/>Resources</a>
 		
 REST is all about resources. Everything in your service, from data access to computation, can be described as a resource. 
@@ -56,7 +56,7 @@ The accept http header is a perfect tool to describe to the server the format ex
 	
 ### <a name="uniformity"/>Uniformity of the interface</a>
 	
-This is what makes REST so different from xml rpc. The VERBS are already defined, no need to invent new custom verbs.
+This is what makes REST so different from xml rpc. The VERBS are already defined, there is no need to invent custom verbs.
 		
 - GET on /resources to list the ressources
 - GET on /resources/123 to read the resource
@@ -80,7 +80,7 @@ From the root url (/), the server should give the accessible urls that the clien
 After that, each resource should have links for other related resources.
 
 Ex: Let's say we do a GET /organizations/123.json
-	A connected format for an organization in json could look like this:
+	A connected json representation for an organization could look like this:
 
 ```javascript		
 { 
@@ -103,14 +103,18 @@ Ex: Let's say we do a GET /organizations/123.json
 		{ method: "POST", action: "/organizations/123/users", 
 			inputs:[ 
 				{ id: "name", type:"string" },
-				{ id: "name", type:"string", value:"" }
+				{ id: "email", type:"email" }
 			] 
 		}
 	]
 }
-``` 
+```
+
 ### <a name="stateless"/>Statelessness</a>
-	
+
+This constraint is to avoid scaling problems, standardize development, maintenance and api.
+Also, it is to ensure that all the state of a resource is accessible and consistent through an URI.
+
 ## <a name="real-world"/>The real world and what we will focus on for now</a>
 
 ## <a name="examples"/>Where can you find examples</a>
