@@ -67,19 +67,21 @@ This is what makes REST so different from xml rpc. The VERBS are already defined
 - DELETE on /resources/123 to delete it.
 		
 ### <a name="connectivity"/>Connectivity</a>
-	This is one of the parts that makes the client generic and decoupled to the server.
-	The server gives the client the URLs needed by the client to access its resources.
-	It also gives the way the client should POST/PUT (by using forms) to modify its resources.
 
-	Basically, the client never hardcode how to access or modify a resource.
-	The main advantage is that the client will break much less than if all this information was hardcoded.
-	
+This is one of the parts that makes the client generic and decoupled to the server.
+The server gives the client the URLs needed by the client to access its resources.
+It also gives the way the client should POST/PUT (by using forms) to modify its resources.
 
-	From the root url (/), the server should give the accessible urls that the client can query or send commands to.
-	After that, each resource should have links for other related resources.
+Basically, the client never hardcode how to access or modify a resource.
+The main advantage is that the client will break much less than if all this information was hardcoded.
 
-	Ex: Let's say we do a GET /organizations/123.json
-		A connected format for an organization in json could look like this:
+
+From the root url (/), the server should give the accessible urls that the client can query or send commands to.
+After that, each resource should have links for other related resources.
+
+Ex: Let's say we do a GET /organizations/123.json
+	A connected format for an organization in json could look like this:
+
 ```		
 { 
 	id: 123,
