@@ -82,7 +82,7 @@ After that, each resource should have links for other related resources.
 Ex: Let's say we do a GET /organizations/123.json
 	A connected format for an organization in json could look like this:
 
-```		
+```javascript		
 { 
 	id: 123,
 	name: "Ziliko",
