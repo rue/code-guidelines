@@ -19,7 +19,10 @@ REST aims at making the machines be able to talk to each other without the need 
 With rpc you need to know in advance all the method with their parameters and return types for the client to be able to talk to the server.
 The communication is so different from service to service that a programmer has to code the interaction between it's client and every services.
 
-A part of the guide will be focused on describing what part the company will implement and what part will be kept on the ice for now.
+The best example of REST one can give is web servers and browsers. The server gives all the info needed by the client to render its pages and access its resources.
+The client has nothing hardcoded that tells him hwo to communicate to the server. But still, the is able to communicate with the server perfectly.
+
+A part of this guide will be focused on describing what part the company will implement and what part will be kept on the ice for now.
 Its purpose is to give you a good idea on how to maintain and build our web services.
 	
 ## <a name="doc"/>Available REST documentations</a>
@@ -59,12 +62,51 @@ This is what makes REST so different from xml rpc. The VERBS are already defined
 - GET on /resources/123 to read the resource
 - HEAD on /resources/123 to check for the resource existence
 
-- POST on /recources to create a new one (the server returns the created URL in the location header)
+- POST on /resources to create a new one (the server returns the created URL in the location header)
 - PUT on /resources/123 to modify an existing one.
-- DELETE on /resources/123 de delete it.
+- DELETE on /resources/123 to delete it.
 		
 ### <a name="connectivity"/>Connectivity</a>
+	This is one of the parts that makes the client generic and decoupled to the server.
+	The server gives the client the URLs needed by the client to access its resources.
+	It also gives the way the client should POST/PUT (by using forms) to modify its resources.
+
+	Basically, the client never hardcode how to access or modify a resource.
+	The main advantage is that the client will break much less than if all this information was hardcoded.
 	
+
+	From the root url (/), the server should give the accessible urls that the client can query or send commands to.
+	After that, each resource should have links for other related resources.
+
+	Ex: Let's say we do a GET /organizations/123.json
+		A connected format for an organization in json could look like this:
+```		
+{ 
+	id: 123,
+	name: "Ziliko",
+	users:{
+		url: "/organizations/123/users",
+		list: [
+			{ name: "bob", url:"/organizations/123/users/1234" },
+			{ name: "tony", url:"/organizations/123/users/1111" },
+		]
+	},
+	url: "/organizations/123",
+	forms:[
+		{ method: "PUT", action: "/organizations/123",
+			inputs:[
+				{ id: "name", type:"string" }
+			]
+		},
+		{ method: "POST", action: "/organizations/123/users", 
+			inputs:[ 
+				{ id: "name", type:"string" },
+				{ id: "name", type:"string", value:"" }
+			] 
+		}
+	]
+}
+``` 
 ### <a name="stateless"/>Statelessness</a>
 	
 ## <a name="real-world"/>The real world and what we will focus on for now</a>
