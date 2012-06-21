@@ -53,7 +53,16 @@ public void When_the_irritable_mailman_does_not_get_an_answer_he_get_angry()
 ```
 It is very easy to understand what is tested, how to set it up and what is the behavior.
 ### BDD
+ Behavior-driven development is nothing else than TDD v2. 
+ There were many complaints when TDD started that a lot of people were doing it wrong.
+ They were testing for the sake of doing tests instead of trying to test the behaviors.
+ It is really important to understand that what we want to test is the application behavior and not just validation or if the value of a variable is correctly set.
+ Your tests should become executable specs of your business.
 ### Writing testable code
+ Because of the design choice of c#, it is really easy to write code that is untestable by default.
+ 
+ 
+ 
 ### Unit vs integration
 ## Practice
 ## Conclustion
