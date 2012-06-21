@@ -29,7 +29,29 @@
  - Repeat till the end of time.
  
 ### Top-down design
+ When you build a new feature, starting by the database then implementing your way up the UI usually introduce a lot of cruft. 
+ By the time you feature is done, you realize that some of the lower layers doesn't fit with the UI or worse you have implemented the world in those layers for future needs.
+ 
+ The proposed method instead, is to start to write an test as close as possible to the UI (controllers?), mock the datasources if needed and then test your way to the bottom until the feature is complete.
 ### Arrange Act Assert
+ This pattern is juste a simple way to organize a single test.
+ The comments are not necessary, but the way the test is split is really important.
+```c#
+[Test]
+public void When_the_irritable_mailman_does_not_get_an_answer_he_get_angry()
+{
+ //Arrange
+ var mailman = new IrritableMailman();
+ var house = new EmptyHouse();
+
+ //Act
+ mailman.KnocksTheDoorOf(house);
+ 
+ //Assert
+ Assert.That(mailman.Mood, Is.EqualTo(Mood.Angry)
+}
+```
+It is very easy to understand what is tested, how to set it up and what is the behavior.
 ### BDD
 ### Writing testable code
 ### Unit vs integration
