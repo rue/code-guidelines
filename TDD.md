@@ -59,10 +59,20 @@ It is very easy to understand what is tested, how to set it up and what is the b
  It is really important to understand that what we want to test is the application behavior and not just validation or if the value of a variable is correctly set.
  Your tests should become executable specs of your business.
 ### Writing testable code
- Because of the design choice of c#, it is really easy to write code that is untestable by default.
+ Because of the design choice of C#, it is easy to write code that is untestable by default.
+ A good advice would be to follow SOLID principles.
+ Secondly, because of the static nature of c# you need to interface the wazoo out of your app so that you can replace the implementations easily.
  
+ If you have problem testing your app because your setup is really big or anything else.
+ It is usually a sign that you have a poor oo design and that you need a refactor.
  
- 
-### Unit vs integration
+### Unit vs Integration tests
+
+Unit tests are very useful for the domain because you can test your behaviors seperately are those test are very fast.
+On the other hand, integration tests usually integrate multiple systems together to ensure that your app is really working as a whole.
+
+Both are useful, the rule of thumb would be that when a unit test is not useful for your particular case do an integration test.
+
+
 ## Practice
 ## Conclustion
