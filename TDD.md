@@ -68,7 +68,7 @@ It is very easy to understand what is tested, how to set it up and what is the b
  
 ### Unit vs Integration tests
 
-Unit tests are very useful for the domain because you can test your behaviors seperately are those test are very fast.
+Unit tests are very useful for the domain because you can test your behaviors seperately and those test are very fast.
 On the other hand, integration tests usually integrate multiple systems together to ensure that your app is really working as a whole.
 
 Both are useful, the rule of thumb would be that when a unit test is not useful for your particular case do an integration test.
