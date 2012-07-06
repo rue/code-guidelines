@@ -1,4 +1,4 @@
-code-guidelines
+Code Guidelines
 ===============
 
 Multiple coding guidelines that we use within the organization.
