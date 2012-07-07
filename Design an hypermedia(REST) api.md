@@ -45,8 +45,8 @@ Instead, you would need a new resource called purchase and you would POST on /cu
 		
 ### <a name="address"/>Addressability</a>
 	
-Every resource has it's unique corresponding URI. eg. /items/5
-It is really important that anybody who can access the resource does it with the same URI.
+Every resource is identified by one or more URIs. A URI must always identify the same resource.
+There is often a convention used where each resource only has a single unique URI, and that URI is used for all access to the resource.
 
 ### <a name="representations"/>Representations</a>
 	
